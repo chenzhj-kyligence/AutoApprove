@@ -1,0 +1,5 @@
+{
+  "auto_approve": "create table auto_approve (\nid INT AUTO_INCREMENT NOT NULL PRIMARY KEY,\ncreate_date DATE,\ncreate_time DATETIME,\nrequest_id VARCHAR(40) NOT NULL,\napplicant VARCHAR(30) NOT NULL,\napprover VARCHAR(30) NOT NULL,\ncontent TEXT\n);",
+  "approved_list": "select * from auto_approve order by create_time desc;",
+  "approved_one_day": "select * from auto_approve where create_date = {create_date}"
+}
